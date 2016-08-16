@@ -3,6 +3,8 @@ using System.Collections;
 
 public class LoseGame : MonoBehaviour {
 
+    public GameController gameController;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -15,6 +17,13 @@ public class LoseGame : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("You lost!");
+        if(col.collider.tag == "Obstacle")
+        {
+            gameController.RestartGame();
+        }
+        else if(col.collider.tag == "Goal")
+        {
+            gameController.WinGame();
+        }
     }
 }
