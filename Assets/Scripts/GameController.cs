@@ -1,29 +1,53 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-    public Transform mooble;
-    public Transform startPosition;
+    public GameObject Menu;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-    public void RestartGame()
+    void Update()
     {
-        mooble.position = startPosition.position;
+        if (Input.GetButtonDown("Cancel"))
+        {
+            ToggleMenu();
+        }
     }
 
     public void WinGame()
     {
-        Debug.Log("You did it!");
-        RestartGame();
+        LoadNextLevel();
+    }
+
+    public void LoadNextLevel()
+    {
+        int nextScene = (SceneManager.GetActiveScene().buildIndex + 1) % SceneManager.sceneCount ;
+        SceneManager.LoadScene(nextScene);
+    }
+
+    public void LoadLevel(string level) {
+        SceneManager.LoadScene(level);
+    }
+
+    public void LoadStartMenu()
+    {
+        SceneManager.LoadScene("Menu_Scene");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void TogglePause(bool t_value)
+    {
+        Time.timeScale = t_value ? 0 : 1;
+    }
+
+    public void ToggleMenu()
+    {
+        bool newState = !Menu.activeSelf;
+        Menu.SetActive(newState);
+        TogglePause(newState);
     }
 }

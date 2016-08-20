@@ -1,0 +1,34 @@
+{"skeleton":{"images":"images/"},
+"bones":[{"name":"root"}],
+"slots":[
+	{"name":"Neck","bone":"root","attachment":"Neck"},
+	{"name":"Foot_back","bone":"root","attachment":"Foot_back"},
+	{"name":"UpperLeg_back","bone":"root","attachment":"UpperLeg_back"},
+	{"name":"LowerLeg_back","bone":"root","attachment":"LowerLeg_back"},
+	{"name":"Wing_back","bone":"root","attachment":"Wing_back"},
+	{"name":"Belly","bone":"root","attachment":"Belly"},
+	{"name":"Layer 2","bone":"root","attachment":"Layer 2"},
+	{"name":"Layer 4","bone":"root","attachment":"Layer 4"},
+	{"name":"Foot","bone":"root","attachment":"Foot"},
+	{"name":"LowerLeg","bone":"root","attachment":"LowerLeg"},
+	{"name":"UpperLeg","bone":"root","attachment":"UpperLeg"},
+	{"name":"Wing","bone":"root","attachment":"Wing"}
+],
+"skins":{
+	"default":{
+		"Wing":{"Wing":{"x":73.5,"y":51.5,"width":29,"height":71}},
+		"UpperLeg":{"UpperLeg":{"x":55.5,"y":28,"width":25,"height":38}},
+		"LowerLeg":{"LowerLeg":{"x":60,"y":28.5,"width":30,"height":35}},
+		"Foot":{"Foot":{"x":47,"y":16.5,"width":44,"height":17}},
+		"Layer 4":{"Layer 4":{"x":73.5,"y":22.5,"width":37,"height":23}},
+		"Layer 2":{"Layer 2":{"x":49.5,"y":80.5,"width":75,"height":73}},
+		"Belly":{"Belly":{"x":45.5,"y":40.5,"width":57,"height":63}},
+		"Wing_back":{"Wing_back":{"x":68.5,"y":52.5,"width":29,"height":71}},
+		"LowerLeg_back":{"LowerLeg_back":{"x":50,"y":28.5,"width":30,"height":35}},
+		"UpperLeg_back":{"UpperLeg_back":{"x":45.5,"y":28,"width":25,"height":38}},
+		"Foot_back":{"Foot_back":{"x":37,"y":16.5,"width":44,"height":17}},
+		"Neck":{"Neck":{"x":54.5,"y":71.5,"width":17,"height":33}}
+	}
+},
+"animations":{"animation":{}}
+}
